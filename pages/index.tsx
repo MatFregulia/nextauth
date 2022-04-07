@@ -9,7 +9,7 @@ export default function Home() {
 
   const { signIn } = useContext(AuthContext)
 
-  function handleSubmit(event: FormEvent) {
+  async function handleSubmit(event: FormEvent) {
     event.preventDefault();
 
     const data = {
@@ -17,7 +17,7 @@ export default function Home() {
       password,
     }
 
-    signIn(data);
+    await signIn(data);
   }
 
   return (
