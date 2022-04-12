@@ -29,7 +29,7 @@ export const AuthContext = createContext({} as AuthContextData)
 
 export function SignOut() {
     destroyCookie(undefined, 'nextauth.token');
-    destroyCookie(undefined, 'nextauth.refreshtojken');
+    destroyCookie(undefined, 'nextauth.refreshtoken');
 
     Router.push('/')
 }
